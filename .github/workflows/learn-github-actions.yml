@@ -7,7 +7,7 @@ jobs:
         steps:
             # ...
             - name: Import Secrets
-              uses: Sandeep-Madhiraju / CICD-Vault-integration
+              uses: hashicorp/vault-action@v2
               with:
                 url: https://vault-cluster-aws.vault.797ef198-e9b5-4477-b448-5c560fcbe367.aws.hashicorp.cloud:8200
                 token: ${{ secrets.VaultToken }}
