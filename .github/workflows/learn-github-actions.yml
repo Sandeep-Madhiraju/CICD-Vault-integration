@@ -17,4 +17,4 @@ jobs:
           token: ${{ secrets.VaultToken }}
           namespace: admin
           secrets: |
-            kv/data/ci/app_secret appsecret | APP_SECRET_KEY_ID
+            kv/data/ci app_secret | APP_SECRET_KEY_ID
