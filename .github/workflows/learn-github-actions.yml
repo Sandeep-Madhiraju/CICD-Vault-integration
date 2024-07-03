@@ -18,3 +18,7 @@ jobs:
           namespace: admin
           secrets: |
             kv/data/ci app_secret | APP_SECRET_KEY_ID
+
+      - name: Display Vault Secrets
+        run: |
+          echo "The secret value is $APP_SECRET_KEY_ID"
