@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
    build:
+         runs-on: self-hosted
         # ...
         steps:
             # ...
@@ -13,6 +14,5 @@ jobs:
                 token: ${{ secrets.VaultToken }}
                 namespace: admin
                 secrets: |
-                    secret/data/ci/aws_temp accessKey | AWS_ACCESS_KEY_ID ;
-                    secret/data/ci/aws_temp secretKey | AWS_SECRET_ACCESS_KEY ;
+                    kv/data/ci/app_secret appsecret | APP_SECRET_KEY_ID ;
             # ...
